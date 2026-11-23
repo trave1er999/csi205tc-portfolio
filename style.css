@@ -269,9 +269,13 @@ a { color: inherit; }
   border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--text-muted);
 }
 
-/* reveal-on-scroll */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.reveal.is-visible { opacity: 1; transform: none; }
+/* reveal-on-scroll: visible by default so the page still works without JS */
+.reveal { opacity: 1; transform: none; }
+html.has-js .reveal {
+  opacity: 0; transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+html.has-js .reveal.is-visible { opacity: 1; transform: none; }
 
 /* ---------- 5. responsive ---------- */
 @media (max-width: 900px) {
@@ -297,7 +301,7 @@ a { color: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  html.has-js .reveal { opacity: 1; transform: none; transition: none; }
   .meter span { animation: none; }
   svg animate { display: none; }
 }
