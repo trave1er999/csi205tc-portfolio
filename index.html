@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of a Networking and Distributed Computing student at XJTLU: projects, coursework and contact details." />
+  <title>CS Portfolio · Networking &amp; Distributed Computing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230f766e'/><text x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='monospace'>AC</text></svg>" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-text">trave1er999</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#timeline">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-switch" id="themeSwitch" type="button" aria-label="Switch colour theme">
+            <span aria-hidden="true">◐</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ---------------------------------------------------------------- -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">CSI205TC · Networking &amp; Distributed Computing</p>
+          <h1>
+            Building systems that
+            <span class="accent" id="typed" aria-live="polite">talk to each other.</span>
+          </h1>
+          <p class="lede">
+            I am a Computer Science student at Xi'an Jiaotong-Liverpool
+            University. I study socket programming, transport protocols and
+            large-scale data processing, and I like turning those ideas into
+            small tools that actually run.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>Protocols</dt><dd>TCP · UDP · HTTP/2</dd></div>
+            <div><dt>Frameworks</dt><dd>Spark · Hadoop</dd></div>
+            <div><dt>Languages</dt><dd>Python · Java · C</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 420 420" role="img" aria-label="Diagram of a client and a server exchanging packets">
+            <defs>
+              <linearGradient id="nodeGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="var(--accent)" />
+                <stop offset="100%" stop-color="var(--accent-2)" />
+              </linearGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="6" result="blur" />
+                <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+            </defs>
+            <g stroke="var(--line)" stroke-width="1" opacity="0.45">
+              <path d="M40 340 L380 80" /><path d="M40 80 L380 340" />
+              <path d="M210 20 L210 400" /><path d="M20 210 L400 210" />
+            </g>
+            <line x1="120" y1="210" x2="300" y2="210" stroke="url(#nodeGradient)"
+                  stroke-width="2.5" stroke-dasharray="10 8" filter="url(#glow)">
+              <animate attributeName="stroke-dashoffset" from="180" to="0" dur="1.8s"
+                       repeatCount="indefinite" />
+            </line>
+            <g>
+              <circle cx="120" cy="210" r="46" fill="var(--surface-2)" stroke="url(#nodeGradient)" stroke-width="2.5" />
+              <text x="120" y="206" text-anchor="middle" class="svg-label">client</text>
+              <text x="120" y="226" text-anchor="middle" class="svg-small">:52344</text>
+            </g>
+            <g>
+              <circle cx="300" cy="210" r="46" fill="var(--surface-2)" stroke="url(#nodeGradient)" stroke-width="2.5" />
+              <text x="300" y="206" text-anchor="middle" class="svg-label">server</text>
+              <text x="300" y="226" text-anchor="middle" class="svg-small">:9001</text>
+            </g>
+            <g fill="var(--accent)">
+              <circle cx="160" cy="210" r="4"><animate attributeName="cx" values="120;300" dur="2.4s" repeatCount="indefinite" /></circle>
+              <circle cx="220" cy="210" r="4"><animate attributeName="cx" values="120;300" dur="2.4s" begin="0.8s" repeatCount="indefinite" /></circle>
+              <circle cx="260" cy="210" r="4"><animate attributeName="cx" values="300;120" dur="2.4s" begin="1.2s" repeatCount="indefinite" /></circle>
+            </g>
+            <text x="210" y="190" text-anchor="middle" class="svg-small">DATA / ACK</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------- -->
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <p class="section-kicker">01 — About</p>
+        <h2>Curious about what happens below the browser tab</h2>
+      </div>
+      <div class="about-grid">
+        <article class="card reveal">
+          <h3>What I work on</h3>
+          <p>
+            My coursework spans transport-layer behaviour, distributed data
+            processing and applied machine learning. I enjoy measuring things:
+            packet captures, throughput numbers, shuffle sizes and model
+            metrics are all part of the same habit of asking "why is it slow?".
+          </p>
+        </article>
+        <article class="card reveal">
+          <h3>How I build</h3>
+          <p>
+            Small, readable modules with explicit interfaces. I write tests for
+            the tricky parts, keep configuration in CLI flags, and document the
+            protocol in the code so that the next reader does not need to guess
+            the wire format.
+          </p>
+        </article>
+        <article class="card reveal">
+          <h3>Currently learning</h3>
+          <p>
+            Spark internals (DAG scheduling, shuffle spills), QUIC and HTTP/3,
+            and the practical side of network security: TLS handshakes,
+            certificate chains and congestion control behaviour on lossy links.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------- -->
+    <section class="section" id="skills">
+      <div class="section-head reveal">
+        <p class="section-kicker">02 — Skills</p>
+        <h2>Tools I reach for</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill reveal">
+          <div class="skill-head"><span>Python</span><span>Advanced</span></div>
+          <div class="meter"><span style="--value: 92%"></span></div>
+        </div>
+        <div class="skill reveal">
+          <div class="skill-head"><span>Socket / TCP / UDP</span><span>Advanced</span></div>
+          <div class="meter"><span style="--value: 88%"></span></div>
+        </div>
+        <div class="skill reveal">
+          <div class="skill-head"><span>Apache Spark</span><span>Proficient</span></div>
+          <div class="meter"><span style="--value: 80%"></span></div>
+        </div>
+        <div class="skill reveal">
+          <div class="skill-head"><span>Hadoop MapReduce</span><span>Proficient</span></div>
+          <div class="meter"><span style="--value: 76%"></span></div>
+        </div>
+        <div class="skill reveal">
+          <div class="skill-head"><span>Wireshark / tcpdump</span><span>Proficient</span></div>
+          <div class="meter"><span style="--value: 78%"></span></div>
+        </div>
+        <div class="skill reveal">
+          <div class="skill-head"><span>HTML / CSS / JavaScript</span><span>Proficient</span></div>
+          <div class="meter"><span style="--value: 74%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------- -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <p class="section-kicker">03 — Projects</p>
+        <h2>Selected coursework</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project reveal">
+          <div class="project-tag">Q1 · Sockets</div>
+          <h3>TCP &amp; UDP video streaming</h3>
+          <p>
+            A Python streaming server and client in both transports, with a
+            sequence-numbered UDP header, selective retransmission and measured
+            jitter, loss and goodput compared against TCP.
+          </p>
+          <ul class="chips">
+            <li>Python</li><li>sockets</li><li>Wireshark</li>
+          </ul>
+        </article>
+        <article class="project reveal">
+          <div class="project-tag">Q3 · MapReduce</div>
+          <h3>Mini MapReduce engine</h3>
+          <p>
+            A standard-library implementation of splitting, mapping,
+            partitioning, shuffling and reducing, validated against a single
+            process word count on public-domain novels.
+          </p>
+          <ul class="chips">
+            <li>Python</li><li>multiprocessing</li>
+          </ul>
+        </article>
+        <article class="project reveal">
+          <div class="project-tag">Q4 · Big data</div>
+          <h3>Hadoop vs Spark word count</h3>
+          <p>
+            The same corpus processed by Hadoop Streaming and by Spark RDDs,
+            with wall-clock timings, shuffle behaviour and a discussion of when
+            each engine is the right choice.
+          </p>
+          <ul class="chips">
+            <li>Hadoop</li><li>Spark</li>
+          </ul>
+        </article>
+        <article class="project reveal">
+          <div class="project-tag">Q5 · MLlib</div>
+          <h3>SMS spam classifier</h3>
+          <p>
+            An end-to-end Spark MLlib pipeline: tokenisation, TF-IDF features,
+            logistic regression, cross-validated hyper-parameters and an
+            evaluation on accuracy, precision, recall, F1 and ROC-AUC.
+          </p>
+          <ul class="chips">
+            <li>Spark MLlib</li><li>TF-IDF</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------- -->
+    <section class="section" id="timeline">
+      <div class="section-head reveal">
+        <p class="section-kicker">04 — Education</p>
+        <h2>How I got here</h2>
+      </div>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div>
+            <h3>BEng Computer Science · XJTLU</h3>
+            <p class="muted">2023 — 2027 · Suzhou &amp; Taicang, China</p>
+            <p>Networking, distributed systems, operating systems and databases.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div>
+            <h3>Coursework: networking &amp; distributed computing</h3>
+            <p class="muted">2026 · CSI205TC</p>
+            <p>Socket streaming, packet analysis, MapReduce, Spark and MLlib.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div>
+            <h3>Self-study: cloud &amp; network security</h3>
+            <p class="muted">Ongoing</p>
+            <p>TLS internals, congestion control papers and container networking.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ---------------------------------------------------------------- -->
+    <section class="section" id="contact">
+      <div class="contact-card reveal">
+        <div>
+          <p class="section-kicker">05 — Contact</p>
+          <h2>Let's compare packet captures</h2>
+          <p class="muted">
+            Happy to talk about transport protocols, data pipelines or
+            anything that needs measuring twice.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="https://github.com/trave1er999" target="_blank" rel="noopener">GitHub profile</a>
+          <a class="btn btn-ghost" href="https://github.com/trave1er999/csi205tc-portfolio" target="_blank" rel="noopener">Site source</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> trave1er999 · Built by hand, deployed with GitHub Pages.</p>
+    <p class="muted">HTML · CSS · vanilla JavaScript — no frameworks, no trackers.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
