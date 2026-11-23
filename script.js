@@ -10,6 +10,10 @@
   const root = document.documentElement;
   const storeKey = "portfolio-theme";
 
+  // The reveal animation is progressive enhancement: without JavaScript the
+  // CSS keeps every section visible.
+  root.classList.add("has-js");
+
   /* ---------------- theme ---------------- */
   const applyTheme = (theme) => {
     root.setAttribute("data-theme", theme);
@@ -57,6 +61,11 @@
       });
     }, { rootMargin: "0px 0px -12% 0px", threshold: 0.12 });
     revealItems.forEach((item) => observer.observe(item));
+    // Failsafe: never leave content hidden, for example when a print or a
+    // full page screenshot is taken before the user scrolls.
+    window.setTimeout(() => {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+    }, 2000);
   } else {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
