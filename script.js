@@ -25,7 +25,13 @@
   };
 
   const saved = localStorage.getItem(storeKey);
-  applyTheme(saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"));
+  // A ?theme=dark|light parameter makes it possible to share a link that opens
+  // the site in a specific theme (also used for the screenshots in the report).
+  const requested = new URLSearchParams(window.location.search).get("theme");
+  const initial = requested === "dark" || requested === "light"
+    ? requested
+    : saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  applyTheme(initial);
 
   document.getElementById("themeSwitch").addEventListener("click", () => {
     const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
